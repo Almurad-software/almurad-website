@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Murad Software Solutions | المراد لحلول البرمجيات</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f8fafc; color: #334155; }
+        header { background: #0f172a; color: #fff; padding: 2rem 1rem; text-align: center; }
+        header h1 { margin: 0; font-size: 1.8rem; }
+        header p { color: #94a3b8; margin-top: 0.5rem; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .app-title { color: #2563eb; font-size: 1.5rem; margin-top: 0; }
+        footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #64748b; }
+        footer a { color: #2563eb; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Al-Murad Software Solutions</h1>
+    <p>المراد لحلول البرمجيات - تطوير الأنظمة والتطبيقات الذكية</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2 class="app-title">تطبيق تبيان (Tebyan App)</h2>
+        <p>تطبيق <strong>تبيان</strong> هو أحد المنتجات الرقمية المعتمدة والتسييرية التابعة لشركة <strong>Al-Murad Software Solutions</strong>. يهدف التطبيق إلى تقديم حلول برمجية آمنة ومبتكرة للمستخدمين لإدارة بياناتهم ومعاملاتهم بكل سهولة وفاعلية.</p>
+    </div>
+
+    <div class="card">
+        <h3>تواصل معنا</h3>
+        <p>إذا كان لديك أي استفسار أو دعم فني يرجى التواصل عبر البريد الإلكتروني الرسمي:</p>
+        <p><strong>البريد الإلكتروني:</strong> support@yourdomain.com</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Al-Murad Software Solutions. جميع الحقوق محفوظة.</p>
+    <p>
+        <a href="#privacy">سياسة الخصوصية</a> | 
+        <a href="#terms">شروط الخدمة</a>
+    </p>
+</footer>
+
+</body>
+</html>
