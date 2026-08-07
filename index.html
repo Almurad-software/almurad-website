@@ -1,48 +1,144 @@
-<!DOCTYPE htm>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Al-Murad Software Solutions | المراد لحلول البرمجيات</title>
     <style>
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f8fafc; color: #334155; }
-        header { background: #0f172a; color: #fff; padding: 2rem 1rem; text-align: center; }
-        header h1 { margin: 0; font-size: 1.8rem; }
-        header p { color: #94a3b8; margin-top: 0.5rem; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .app-title { color: #2563eb; font-size: 1.5rem; margin-top: 0; }
-        footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #64748b; }
-        footer a { color: #2563eb; text-decoration: none; margin: 0 10px; }
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: -2.5rem auto 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .app-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 1.2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .app-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .app-subtitle {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .email-link {
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: none;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Al-Murad Software Solutions</h1>
-    <p>المراد لحلول البرمجيات - تطوير الأنظمة والتطبيقات الذكية</p>
-</header>
+    <header>
+        <h1>Al-Murad Software Solutions</h1>
+        <p>المراد لحلول البرمجيات - تطوير الأنظمة والتطبيقات الذكية</p>
+    </header>
 
-<div class="container">
-    <div class="card">
-        <h2 class="app-title">تطبيق تبيان (Tebyan App)</h2>
-        <p>تطبيق <strong>تبيان</strong> هو أحد المنتجات الرقمية المعتمدة والتسييرية التابعة لشركة <strong>Al-Murad Software Solutions</strong>. يهدف التطبيق إلى تقديم حلول برمجية آمنة ومبتكرة للمستخدمين لإدارة بياناتهم ومعاملاتهم بكل سهولة وفاعلية.</p>
+    <div class="container">
+        <div class="card">
+            <!-- الشعار المستورد من Figma -->
+            <img src="logo.png" alt="شعار تطبيق تبيان" class="app-logo">
+            
+            <h2 class="app-title">تبيان | Tebyan</h2>
+            <div class="app-subtitle">النظام الذكي لإدارة الديون والحسابات</div>
+            
+            <p>
+                تطبيق تبيان هو أحد المنتجات الرقمية المعتمدة والتسييرية التابعة لشركة Al-Murad Software Solutions. يهدف التطبيق إلى تقديم حلول برمجية آمنة ومبتكرة للمستخدمين لإدارة بياناتهم، ديونهم، ومعاملاتهم بكل سهولة وفاعلية.
+            </p>
+        </div>
+
+        <div class="contact-section">
+            <h3>تواصل معنا</h3>
+            <p>إذا كان لديك أي استفسار أو دعم فني يرجى التواصل عبر البريد الإلكتروني الرسمي:</p>
+            <p>البريد الإلكتروني: <a href="mailto:info@almurad-software.com" class="email-link">info@almurad-software.com</a></p>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>تواصل معنا</h3>
-        <p>إذا كان لديك أي استفسار أو دعم فني يرجى التواصل عبر البريد الإلكتروني الرسمي:</p>
-        <p><strong>البريد الإلكتروني:</strong> support@yourdomain.com</p>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 Al-Murad Software Solutions. جميع الحقوق محفوظة.</p>
-    <p>
-        <a href="#privacy">سياسة الخصوصية</a> | 
-        <a href="#terms">شروط الخدمة</a>
-    </p>
-</footer>
+    <footer>
+        &copy; 2026 Al-Murad Software Solutions. جميع الحقوق محفوظة.
+    </footer>
 
 </body>
 </html>
