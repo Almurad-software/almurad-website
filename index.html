@@ -13,6 +13,7 @@
             --text-color: #334155;
             --text-muted: #64748b;
             --border-color: #e2e8f0;
+            --whatsapp-color: #25d366;
         }
 
         body {
@@ -58,21 +59,19 @@
             text-align: center;
         }
 
-.app-logo {
-    max-width: 120px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 1.2rem auto;
-    border-radius: 26px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-
-    /* تحسين معالجة الصورة وإعادة رسمها لمنع الضبابية أثناء التصغير */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
+        .app-logo {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 1.2rem auto;
+            border-radius: 26px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
 
         .app-title {
             color: var(--primary-color);
@@ -98,7 +97,7 @@
         }
 
         /* قسم المميزات */
-        .features-title {
+        .features-title, .section-title {
             font-size: 1.4rem;
             color: var(--primary-color);
             margin-bottom: 1.5rem;
@@ -107,7 +106,7 @@
             padding-bottom: 0.5rem;
         }
 
-        .features-title::after {
+        .features-title::after, .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -159,12 +158,98 @@
             line-height: 1.5;
         }
 
+        /* قسم إدارة الشركة والتواصل */
         .contact-section {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
             text-align: center;
+        }
+
+        .management-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .manager-card {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .manager-card h4 {
+            margin: 0 0 0.2rem 0;
+            color: var(--primary-color);
+            font-size: 1.15rem;
+        }
+
+        .manager-role {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .manager-phone {
+            font-size: 1rem;
+            direction: ltr;
+            color: var(--text-color);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.6rem;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            flex: 1;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-call {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .btn-call:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-color);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb956;
+        }
+
+        .general-contact {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         .email-link {
@@ -197,7 +282,7 @@
 
     <div class="container">
         <div class="card">
-            <!-- الشعار المستورد من Figma -->
+            <!-- الشعار -->
             <img src="logo.png" alt="شعار تطبيق تبيان" class="app-logo">
             
             <h2 class="app-title">تبيان | Tebyan</h2>
@@ -262,10 +347,40 @@
             </div>
         </div>
 
+        <!-- قسم إدارة الشركة والتواصل المباشر -->
         <div class="contact-section">
-            <h3>تواصل معنا</h3>
-            <p>إذا كان لديك أي استفسار أو طلب دعم فني يرجى التواصل عبر البريد الإلكتروني الرسمي:</p>
-            <p>البريد الإلكتروني: <a href="mailto:info@almurad-software.com" class="email-link">info@almurad-software.com</a></p>
+            <h3 class="section-title">إدارة الشركة والتواصل المباشر</h3>
+            
+            <div class="management-grid">
+                
+                <!-- المدير التنفيذي الأول -->
+                <div class="manager-card">
+                    <h4>ناصر المرادي علي الفقير</h4>
+                    <div class="manager-role">المدير التنفيذي الأول</div>
+                    <div class="manager-phone">+967 780 000 267</div>
+                    <div class="action-buttons">
+                        <a href="tel:+967780000267" class="btn btn-call">📞 اتصال</a>
+                        <a href="https://wa.me/967780000267" target="_blank" class="btn btn-whatsapp">💬 واتساب</a>
+                    </div>
+                </div>
+
+                <!-- المدير الثاني -->
+                <div class="manager-card">
+                    <h4>عبد الصمد المرادي علي الفقير</h4>
+                    <div class="manager-role">المدير التنفيذي</div>
+                    <div class="manager-phone">+967 780 081 010</div>
+                    <div class="action-buttons">
+                        <a href="tel:+967780081010" class="btn btn-call">📞 اتصال</a>
+                        <a href="https://wa.me/967780081010" target="_blank" class="btn btn-whatsapp">💬 واتساب</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="general-contact">
+                <p>للتعاملات الرسمية والاستفسارات العامة عبر البريد الإلكتروني:</p>
+                <p><a href="mailto:info@almurad-software.com" class="email-link">info@almurad-software.com</a></p>
+            </div>
         </div>
     </div>
 
