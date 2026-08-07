@@ -66,6 +66,12 @@
     margin: 0 auto 1.2rem auto;
     border-radius: 26px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+
+    /* تحسين معالجة الصورة وإعادة رسمها لمنع الضبابية أثناء التصغير */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
         .app-title {
