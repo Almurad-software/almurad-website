@@ -12,6 +12,7 @@
             --card-bg: #ffffff;
             --text-color: #334155;
             --text-muted: #64748b;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -26,13 +27,14 @@
         header {
             background-color: var(--primary-color);
             color: #ffffff;
-            padding: 3rem 1rem;
+            padding: 3.5rem 1rem 4.5rem 1rem;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.2rem;
+            letter-spacing: -0.5px;
         }
 
         header p {
@@ -42,16 +44,16 @@
         }
 
         .container {
-            max-width: 850px;
-            margin: -2.5rem auto 3rem auto;
+            max-width: 900px;
+            margin: -3rem auto 3rem auto;
             padding: 0 1rem;
         }
 
         .card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 2.5rem 2rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.02);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -61,28 +63,98 @@
             height: 120px;
             object-fit: contain;
             margin-bottom: 1.2rem;
-            border-radius: 24px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 26px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
         }
 
         .app-title {
             color: var(--primary-color);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin: 0;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .app-subtitle {
             color: var(--accent-color);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
             margin-top: 0.3rem;
             margin-bottom: 1.5rem;
         }
 
+        .app-description {
+            font-size: 1.05rem;
+            color: var(--text-color);
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.8;
+        }
+
+        /* قسم المميزات */
+        .features-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .features-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 25%;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            text-align: right;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.25rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+            border-color: #cbd5e1;
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feature-item h4 {
+            margin: 0 0 0.4rem 0;
+            color: var(--primary-color);
+            font-size: 1.05rem;
+        }
+
+        .feature-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
         .contact-section {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 2rem;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
             text-align: center;
@@ -103,7 +175,7 @@
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid var(--border-color);
             font-size: 0.9rem;
             color: var(--text-muted);
         }
@@ -124,14 +196,68 @@
             <h2 class="app-title">تبيان | Tebyan</h2>
             <div class="app-subtitle">النظام الذكي لإدارة الديون والحسابات</div>
             
-            <p>
-                تطبيق تبيان هو أحد المنتجات الرقمية المعتمدة والتسييرية التابعة لشركة Al-Murad Software Solutions. يهدف التطبيق إلى تقديم حلول برمجية آمنة ومبتكرة للمستخدمين لإدارة بياناتهم، ديونهم، ومعاملاتهم بكل سهولة وفاعلية.
+            <p class="app-description">
+                تطبيق <strong>تبيان</strong> هو أحد المنتجات الرقمية المعتمدة والتسييرية التابعة لشركة <strong>Al-Murad Software Solutions</strong>. يهدف التطبيق إلى تقديم حلول برمجية آمنة ومبتكرة للمستخدمين لإدارة البيانات، الديون، المعاملات المالية، والحسابات بكل سهولة وفاعلية.
             </p>
+
+            <h3 class="features-title">أبرز مميزات تطبيق تبيان</h3>
+
+            <div class="features-grid">
+                
+                <div class="feature-item">
+                    <span class="feature-icon">⚖️</span>
+                    <h4>إدارة الديون (لك وعليك)</h4>
+                    <p>تسجيل حركات الديون بدقة، سواء كانت لك أو عليك، مع تتبع رصيد كل شخص تلقائياً.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">🤝</span>
+                    <h4>ربط بين الدائن والمدين</h4>
+                    <p>إمكانية فتح حساب للمدين، حيث يتلقى إشعاراً لمراجعة الحساب والاطلاع على البيانات بالقبول أو الرفض.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">☁️</span>
+                    <h4>نسخ سحابي واسترجاع فوري</h4>
+                    <p>حفظ بياناتك بشكل سحابي مشفر. عند تغيير جهازك أو فقده، استرجع كل بياناتك بمجرد تسجيل الدخول.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">🔐</span>
+                    <h4>أمان وحماية مضاعفة</h4>
+                    <p>حماية الحساب برمز دخول شخصي، مع رمز تأكيد PIN خاص بكل عملية مالية لمنع التغييرات غير المصرح بها.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">📄</span>
+                    <h4>تقارير PDF وسندات قبض</h4>
+                    <p>إصدار كشوفات حساب وسندات قبض بصيغة PDF قابلة للمشاركة والتصدير والطباعة بسهولة.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">💱</span>
+                    <h4>تعدد العملات والتقارير</h4>
+                    <p>إدارة الحسابات بعملات مختلفة مع إمكانية استعراض تقارير تفصيلية منفصلة لكل عملة على حدة.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <h4>تصميم عصري وأنيق</h4>
+                    <p>واجهة استخدام بسيطة وسريعة تم تصميمها بعناية لسهولة الوصول والتنقل للجميع.</p>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h4>تشفير كامل للبيانات</h4>
+                    <p>تشفير عالي الأمان لحماية كافة سجلاتك ومعاملاتك الشخصية والمالية بدقة فائقة.</p>
+                </div>
+
+            </div>
         </div>
 
         <div class="contact-section">
             <h3>تواصل معنا</h3>
-            <p>إذا كان لديك أي استفسار أو دعم فني يرجى التواصل عبر البريد الإلكتروني الرسمي:</p>
+            <p>إذا كان لديك أي استفسار أو طلب دعم فني يرجى التواصل عبر البريد الإلكتروني الرسمي:</p>
             <p>البريد الإلكتروني: <a href="mailto:info@almurad-software.com" class="email-link">info@almurad-software.com</a></p>
         </div>
     </div>
